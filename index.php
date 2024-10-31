@@ -20,6 +20,10 @@
                 <span class="username">User123:</span>
                 <p>Hey, anyone here?</p>
             </div>
+            <div class="message message-left">
+                <span class="username">EgaGanteng123:</span>
+                <p>Slebew banget gak sih?</p>
+            </div>
             <div class="message message-right">
                 <span class="username">Anon456:</span>
                 <p>Yeah, what's up?</p>
