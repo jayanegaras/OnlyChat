@@ -24,5 +24,7 @@ class CreateUser
 }
 
 
-$UserBaru = new CreateUser("egaganteng", "ayamgoreng", "ayam.jpg");
-$UserBaru->create();
+
+// This is Da Test
+// $UserBaru = new CreateUser("egaganteng", "ayamgoreng", "ayam.jpg");
+// $UserBaru->create();

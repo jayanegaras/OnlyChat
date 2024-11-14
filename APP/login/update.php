@@ -27,6 +27,6 @@ class Update
     }
 }
 
-
-$UpdateUser = new Update("Egasukaayam", "AyamSukaEga", "bukanayam.jpg", 5);
-$UpdateUser->update();
+// This is da test
+// $UpdateUser = new Update("Egasukaayam", "AyamSukaEga", "bukanayam.jpg", 5);
+// $UpdateUser->update();
