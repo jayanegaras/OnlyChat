@@ -16,7 +16,7 @@ class Update
         $this->query = "UPDATE users SET
 		username = '$username',
 		password = '$password',
-		profile = '$profile',
+		profile = '$profile'
 		WHERE id = $id;
 	";
     }
@@ -28,5 +28,5 @@ class Update
 }
 
 
-$UpdateUser = new Update("Egasukaayam", "AyamSukaEga", "bukanayam.jpg", 4);
+$UpdateUser = new Update("Egasukaayam", "AyamSukaEga", "bukanayam.jpg", 5);
 $UpdateUser->update();
