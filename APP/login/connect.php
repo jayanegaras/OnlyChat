@@ -14,7 +14,11 @@ class Connect
 
     public function query()
     {
-        mysqli_query($this->conn, $this->query);
-        return 1;
+        $result = mysqli_query($this->conn, $this->query);
+        return $result;
+    }
+    public function read($dataTable)
+    {
+        return mysqli_fetch_assoc($dataTable);
     }
 }

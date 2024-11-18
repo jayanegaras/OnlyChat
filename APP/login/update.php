@@ -3,21 +3,18 @@ require_once 'connect.php';
 
 class Update
 {
-    private $username;
-    private $password;
-    private $profile;
+    public $token;
+    public $password;
+    public $profile;
     private $query;
 
-    public function __construct($username, $password, $profile, $id)
+    public function __construct($password,  $token)
     {
-        $this->username = $username;
-        $this->password = $password;
-        $this->profile = $profile;
+        $this->password = password_hash($password, PASSWORD_DEFAULT);
+        $this->token = $token;
         $this->query = "UPDATE users SET
-		username = '$username',
-		password = '$password',
-		profile = '$profile'
-		WHERE id = $id;
+		password = '$this->password'
+		WHERE token = '$token';
 	";
     }
     public function update()
@@ -25,8 +22,13 @@ class Update
         $connect = new Connect($this->query);
         $connect->query();
     }
+    public function tokenVerify(){
+        $queryToken = "SELECT * FROM users WHERE token = '$this->token'"
+        $verify = new Connect($queryToken);
+        return $verify->read($verify->query());
+    }
 }
 
 // This is da test
-// $UpdateUser = new Update("Egasukaayam", "AyamSukaEga", "bukanayam.jpg", 5);
+// $UpdateUser = new Update("Egasukaayam", "ZWdhZ2FudGVuZ2U4Zjc0NGQ0NDgzMTZjY2QzN2QwNzg4N2QwNmNkZmQy");
 // $UpdateUser->update();
