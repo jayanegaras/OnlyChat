@@ -4,41 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLEBEW Forum</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>SLEBEW</h1>
-    </header>
+    <form action="register.php" method="POST">
+        <p>Select Your Animal Spirit</p>
 
-    <!-- Forum Container -->
-    <div class="forum-container">
-        <!-- Chat Display Area -->
-        <div class="chat-box" id="contain">
-            <div class="message message-left">
-                <span class="username">User123:</span>
-                <p>Hey, anyone here?</p>
-            </div>
-            <div class="message message-left">
-                <span class="username">EgaGanteng123:</span>
-                <p>Slebew banget gak sih?</p>
-            </div>
-            <div class="message message-right">
-                <span class="username">Anon456:</span>
-                <p>Yeah, what's up?</p>
-            </div>
-        </div>
+        <!-- Frog Option -->
+        <img src="src/katak.jpg" alt="katak" class="radio-image" data-value="katak">
+        <input type="radio" name="userAnimal" value="katak" id="radio-katak">
 
-        <!-- Message Input Area -->
-        <div class="chat-form">
-            <input type="text" placeholder="Type your message..." name="message" id="input" required>
-            <button id="output">Send</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+        <!-- Snake Option -->
+        <img src="src/ular.jpg" alt="ular" class="radio-image" data-value="ular">
+        <input type="radio" name="userAnimal" value="ular" id="radio-ular">
+
+        <!-- Snail Option -->
+        <img src="src/siput.jpg" alt="siput" class="radio-image" data-value="siput">
+        <input type="radio" name="userAnimal" value="siput" id="radio-siput">
+
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+        <button type="submit">Submit</button>
+    </form>
+    <script src="login.js"></script>
 </body>
 
 </html>

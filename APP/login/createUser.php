@@ -11,10 +11,10 @@ class CreateUser
 
     public function __construct($username, $password, $profile)
     {
-        $this->username = $username . bin2hex(random_bytes(16));
+        $this->username = $username . mt_rand(10000, 99999);
         $this->password = password_hash($password, PASSWORD_DEFAULT);
         $this->profile = $profile;
-        $this->token = base64_encode($this->username);
+        $this->token = base64_encode($this->username . time());
 
 
         $this->query = "INSERT INTO users VALUES('$this->username', '', '$this->password', '$profile', '$this->token')";
@@ -29,6 +29,10 @@ class CreateUser
         } else {
             return false;
         }
+    }
+    public function callUsername()
+    {
+        return $this->username;
     }
     public function CheckUsername()
     {

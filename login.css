@@ -61,3 +61,18 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+    input[type="radio"] {
+        display: none; /* Completely hide the radio buttons */
+    }
+
+    .radio-image {
+        width: 100px; /* Set image size */
+        cursor: pointer; /* Pointer cursor for clickable images */
+        border: 2px solid transparent; /* Default border */
+        transition: border 0.3s; /* Smooth border animation */
+    }
+
+    .radio-image.selected {
+        border: 2px solid blue; /* Highlight selected image */
+    }

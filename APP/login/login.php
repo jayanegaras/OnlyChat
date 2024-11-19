@@ -5,6 +5,7 @@ class Login
 {
     public $username;
     private $password;
+    public $query;
 
     public function __construct($username, $password)
     {

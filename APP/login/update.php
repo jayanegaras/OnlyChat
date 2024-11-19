@@ -22,8 +22,9 @@ class Update
         $connect = new Connect($this->query);
         $connect->query();
     }
-    public function tokenVerify(){
-        $queryToken = "SELECT * FROM users WHERE token = '$this->token'"
+    public function tokenVerify()
+    {
+        $queryToken = "SELECT * FROM users WHERE token = '$this->token'";
         $verify = new Connect($queryToken);
         return $verify->read($verify->query());
     }
