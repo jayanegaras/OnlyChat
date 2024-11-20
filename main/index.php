@@ -1,17 +1,18 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLEBEW Forum</title>
+    <title>Onlychat</title>
     <link rel="stylesheet" href="chat.css">
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-        <h1>SLEBEW</h1>
+        <h1>Onlychat</h1>
     </header>
 
     <!-- Forum Container -->
