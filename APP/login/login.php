@@ -18,11 +18,14 @@ class Login
     {
         $connection = new Connect($this->query);
         $row = $connection->read($connection->query());
-        var_dump($row);
-        if (password_verify($this->password, $row["password"])) {
-            return true;
-        } else {
+        if (is_null($row)) {
             return false;
+        } else {
+            if (password_verify($this->password, $row["password"])) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }
