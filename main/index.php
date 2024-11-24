@@ -16,10 +16,10 @@
     </header>
 
     <!-- Forum Container -->
-    <div class="forum-container">
+    <div class="forum-container" id="forumContainer">
         <!-- Chat Display Area -->
         <div class="chat-box" id="contain">
-            <div class="message message-left">
+            <!-- <div class="message message-left">
                 <span class="username">User123:</span>
                 <p>Hey, anyone here?</p>
             </div>
@@ -30,16 +30,16 @@
             <div class="message message-right">
                 <span class="username">Anon456:</span>
                 <p>Yeah, what's up?</p>
-            </div>
+            </div> -->
         </div>
 
         <!-- Message Input Area -->
         <div class="chat-form">
             <input type="text" placeholder="Type your message..." name="message" id="input" required>
-            <button id="output">Send</button>
+            <button id="button">Send</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="chat.js"></script>
 </body>
 
 </html>

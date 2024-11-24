@@ -21,4 +21,8 @@ class connectChat
     {
         return mysqli_fetch_assoc($dataTable);
     }
+    public function fetchAll($dataTable)
+    {
+        return mysqli_fetch_all($dataTable, MYSQLI_ASSOC);
+    }
 }
