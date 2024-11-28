@@ -2,6 +2,34 @@
 document.addEventListener('DOMContentLoaded', ()=> {
     // Send Button
     const button = document.getElementById("button");
+    const chatIput = document.getElementById("input");
+    chatIput.addEventListener('keydown', (e)=>{
+        if (e.key === 'Enter') {
+            e.preventDefault(); 
+            const xhr = new XMLHttpRequest();
+            const url = "sendMessage.php"
+    
+            xhr.open("POST", url, true);
+    
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    
+            // Log data
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState ===4 && xhr.status === 200){
+                    console.log("Response received", xhr.responseText)
+                }
+            };
+    
+            // Prepare data
+            const message = document.getElementById('input').value;
+    
+            // Send data
+            xhr.send("message=" + encodeURIComponent(message));
+    
+            // remove input
+            document.getElementById('input').value = '';
+        }
+    });
     button.addEventListener('click', (e)=>{
         e.preventDefault();
         const xhr = new XMLHttpRequest();
