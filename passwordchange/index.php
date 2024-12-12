@@ -26,17 +26,19 @@
                                 <input type="text" name="token" id="token" autocomplete="off" required placeholder="Enter your token">
                             </li>
                         <?php endif; ?>
-                        <li>
-                            <h2>Your Account</h2>
-                        </li>
-                        <li>
-                            <label for="password">Password:</label>
-                            <input class="password" type="password" name="password" placeholder="Enter your password" id="passlog">
-                        </li>
-                        <li>
-                            Show Password
-                            <input data-target="passlog" type="checkbox" class="checklist">
-                        </li>
+                        <?php if (isset($_GET["token"])): ?>
+                            <li>
+                                <h2 style="color: black;">Your Account</h2>
+                            </li>
+                            <li>
+                                <label for="password">Password:</label>
+                                <input class="password" type="password" name="password" placeholder="Enter your password" id="passlog">
+                            </li>
+                            <li>
+                                Show Password
+                                <input data-target="passlog" type="checkbox" class="checklist">
+                            </li>
+                        <?php endif; ?>
                         <li>
                             <button type="submit" name="sign" class="sign" action="">Change</button>
                         </li>

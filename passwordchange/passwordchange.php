@@ -5,8 +5,15 @@ require_once '../APP/init.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // verify
     if (!isset($password)) {
-        $token = $_GET = ""
-        header()
+        $token = $_POST["token"];
+
+        // verify
+        $query = "SELECT * FROM users WHERE token = '$this->token'";
+        $verify = new Connect($query);
+
+
+
+        header("Location: index.php?token=" . $token);
     };
     // Collect the form data
     $token = $_POST['token'] ?? null;
@@ -21,5 +28,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
-$changePass = new Update("345", "dWxhcjY0MTkxMTczMzk2Mjc3NQ==");
-var_dump($changePass->tokenVerify());
+// $changePass = new Update("345", "dWxhcjY0MTkxMTczMzk2Mjc3NQ==");
+// var_dump($changePass->tokenVerify());
