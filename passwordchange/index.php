@@ -20,7 +20,7 @@
             <div class="contain hidden show" id="login">
                 <form action="passwordchange.php" method="POST">
                     <ul>
-                        <?php if (!isset($_POST["token"])): ?>
+                        <?php if (!isset($_GET["token"])): ?>
                             <li>
                                 <label for="token">Token</label>
                                 <input type="text" name="token" id="token" autocomplete="off" required placeholder="Enter your token">

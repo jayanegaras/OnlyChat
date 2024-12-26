@@ -8,12 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $token = $_POST["token"];
 
         // verify
-        $query = "SELECT * FROM users WHERE token = '$this->token'";
+        $query = "SELECT * FROM users WHERE token = '$token'";
         $verify = new Connect($query);
+        $data = $verify->read($verify->query());
 
-
-
-        header("Location: index.php?token=" . $token);
+        header("Location: index.php?token=" . $token . "&username=" . $data["username"]);
     };
     // Collect the form data
     $token = $_POST['token'] ?? null;
