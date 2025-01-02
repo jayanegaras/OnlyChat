@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php session_start();
+var_dump($_SESSION);
+if (null !== $_SESSION("username")) {
+    header('Location: ../index.php');
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,13 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onlychat</title>
     <link rel="stylesheet" href="chat.css">
+    <link rel="shortcut icon" href="../src/icon.svg" type="image/x-icon">
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-        <img src="" alt="">
-        <h1>ONLYCHAT</h1>
+        <img src="../src/onlychat.png" alt="Onlychat">
     </header>
     <div class="main">
         <div class="profile">

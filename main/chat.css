@@ -51,7 +51,11 @@ header {
     padding: 15px;
     text-align: center;
     display: flex;
+    align-items: center;
     height: 10vh;
+}
+header img{
+    height: 8vh;
 }
 
 header h1 {
