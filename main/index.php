@@ -1,5 +1,4 @@
 <?php session_start();
-var_dump($_SESSION);
 if (!isset($_SESSION["username"])) {
     header('Location: ../index.php');
 };
@@ -22,7 +21,8 @@ if (!isset($_SESSION["username"])) {
     </header>
     <div class="main">
         <div class="profile">
-
+            <h2>Change Password</h2>
+            <img src="../src/meng.webp" alt="Meng" loading="lazy">
         </div>
         <!-- Forum Container -->
         <div class="forum-container" id="forumContainer">
